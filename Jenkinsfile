@@ -23,6 +23,8 @@ pipeline {
             steps {
                 script {
                     sh "bash build/build_amd64.sh"
+                    sh "ls -la build"
+                    sh "ls -la ."
                     echo 'Building Dify Sandbox...'
                     sh "docker build -t ghcr.io/mrofisr/dify-sandbox:${GIT_TAG} docker/amd64"
                 }
