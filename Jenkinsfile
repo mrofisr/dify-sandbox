@@ -24,7 +24,7 @@ pipeline {
                 script {
                     sh "bash build/build_amd64.sh"
                     echo 'Building Dify Sandbox...'
-                    sh "docker build -t ghcr.io/mrofisr/dify-sandbox:${GIT_TAG} docker/amd64/dockerfile "
+                    sh "docker build -t ghcr.io/mrofisr/dify-sandbox:${GIT_TAG} docker/amd64"
                 }
             }
         }
