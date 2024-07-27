@@ -26,7 +26,7 @@ pipeline {
                     sh "ls -la build"
                     sh "ls -la ."
                     echo 'Building Dify Sandbox...'
-                    sh "docker build -t ghcr.io/mrofisr/dify-sandbox:${GIT_TAG} docker/amd64"
+                    sh "docker build -t ghcr.io/mrofisr/dify-sandbox:${GIT_TAG} -f docker/amd64/dockerfile ."
                 }
             }
         }
